@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./misc/dark.css">
+     <!-- <link rel="stylesheet" href="./misc/prism.css"> -->
+     <!-- <script src="./misc/prism.js"></script> -->
+    <link rel="stylesheet"
+      href="./misc/highlight-theme.css">
+<script src="./misc/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+     <title>Go Cheat sheet</title>
+</head>
+<body>
+<h1>Golang cheat Sheet</h1>
+
+<h4>Table of Content</h4>
+<ol>
+<li><a href="#importStatement">import Statement</a></li>
+<li><a href="#printline">print line</a></li>
+<li><a href="#variables">variables</a></li>
+
+</ol>
+
+<h3 id="importStatement" >import statement</h3>
+
+<pre class="language-go">
+<code >
+import "fmt"
+import "rsc.io/quote"
+
+//or
+import ("fmt"
+     "rsc.io/quote"
+     "strconv"
+     )
+</code>
+</pre>
+
+<h3 id="printline">print line</h3>
+<pre>
+<code>
+fmt.Println( "Hello World")     
+
+</code>
+</pre>
+
+
+<h3 id="variables">variables</h3>
+<pre>
+<code>
+// Any of the following is ok
+var name string = "Breaking"
+var name  = "Breaking"
+name  := "Breaking"
+</code>
+</pre>
+
+</body>
+</html>
