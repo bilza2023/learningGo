@@ -1,12 +1,11 @@
 package main
-
-
-import "fmt"
-import "rsc.io/quote"
+import ("fmt"
+	"github.com/bilza2023/learningGo/util"
+		)
 
 func main(){
-	fmt.Println(quote.Go())
-	fmt.Println(quote.Go())
-	fmt.Println(quote.Go())
-	fmt.Println(quote.Go())
+greetings := util.Greetings()
+fmt.Println("Return from util" , greetings)
+
 }
+

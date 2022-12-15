@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../misc/dark.css">
+     <!-- <link rel="stylesheet" href="./misc/prism.css"> -->
+     <!-- <script src="./misc/prism.js"></script> -->
+    <link rel="stylesheet"
+      href="../misc/highlight-theme.css">
+<script src="../misc/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+     <title>Go Arrays</title>
+</head>
+<body>
+<h1>Arrays</h1>
+
+<p>Array basic example</span>.</p>
+
+<pre class="language-go">
+<code >
+package main
+import "fmt"
+
+func main(){
+// - Also
+// var cities = [] string { "London" , "Milan" , "Tokyo"}
+// cities := [] string { "London" , "Milan" , "Tokyo"}
+
+var cities = [] string {}
+cities = append(cities,"London" )
+cities = append(cities,"Milan" )
+cities = append(cities,"Tokyo" )
+
+//--Slice Type and value
+	fmt.Printf("Slice value : %v \n" , cities)
+	fmt.Printf("Slice Type : %T \n" , cities)
+//--Slice Length using len()	
+	fmt.Printf("Slice length : %v \n" , len(cities) )
+
+////--Alternative way
+names := []string {}
+names = append(names,"Tim" )
+names = append(names,"Ali" )
+fmt.Println("Slice :" , names);
+
+//--Slice also has Capacity
+
+fmt.Println("The capacity of the slice is" , cap(names));
+
+}
+</code>
+</pre>
+
+
+</body>
+</html>

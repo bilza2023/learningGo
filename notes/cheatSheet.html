@@ -20,7 +20,9 @@
 <ol>
 <li><a href="#importStatement">import Statement</a></li>
 <li><a href="#printline">print line</a></li>
+<li><a href="#printf">printf</a></li>
 <li><a href="#variables">variables</a></li>
+<li><a href="#clicommands">important cli commands</a></li>
 
 </ol>
 
@@ -42,8 +44,18 @@ import ("fmt"
 <h3 id="printline">print line</h3>
 <pre>
 <code>
-fmt.Println( "Hello World")     
-
+var name string = "John"
+var age uint = 22
+fmt.Println("My name is",name, "and my age is :",age);
+</code>
+</pre>
+<h3 id="printf">printf</h3>
+<pre>
+<code>
+var name string = "John"
+var age uint = 22
+// \n will get you new line
+fmt.Printf("My name is %v and my age is :%v \n",name,age);
 </code>
 </pre>
 
@@ -54,7 +66,27 @@ fmt.Println( "Hello World")
 // Any of the following is ok
 var name string = "Breaking"
 var name  = "Breaking"
+//--  Most common way to create a variable
 name  := "Breaking"
+//-we can also declare a variable without value - the variable will have default value and NOT null
+var age int
+g = 16
+// - the := must be use just once while declaring the variable
+
+</code>
+</pre>
+
+
+<h3 id="clicommands">cli commands</h3>
+<pre>
+<code>
+ go version
+ go env
+ go mod init
+ go mod tidy
+ go run .
+ go run filename.go
+
 </code>
 </pre>
 

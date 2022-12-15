@@ -38,4 +38,8 @@ background-color: #080877;
     background-color: rgb(1, 1, 45);
 }
 
+.red {color:red;}
+.green {color:green;}
+.blue {color:blue;}
+.yellow {color:yellow;}
 .language-javascript {   padding-left: 25%;  }
