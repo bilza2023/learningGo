@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../misc/dark.css">
+     <!-- <link rel="stylesheet" href="./misc/prism.css"> -->
+     <!-- <script src="./misc/prism.js"></script> -->
+    <link rel="stylesheet"
+      href="../misc/highlight-theme.css">
+<script src="../misc/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+     <title>Go Arrays</title>
+</head>
+<body>
+<h1>Arrays</h1>
+
+<p>Array basic example</span>.</p>
+
+<pre class="language-go">
+<code >
+package main
+import "fmt"
+
+func main(){
+
+var users = [3]string { "mike", "jim" , "mich"}
+fmt.Println("Welcome..", users[0]) 
+fmt.Println("Welcome..", users[1]) 
+fmt.Println("Welcome..", users[2]) 
+
+var cities = [3] string {}
+// also cities := [3] string {}
+	cities[0] = "London"
+	cities[1] = "Milan"
+	cities[2] = "Tokyo"
+	//--This line will cause error
+	// cities[10] = "Error"
+
+fmt.Println( "The names of the cities are :", 
+	cities[0] , "," ,
+	cities[1],  ",",
+	cities[2])
+
+//--Array Type and value
+	fmt.Printf("Array value : %v \n" , cities)
+	fmt.Printf("Array Type : %T \n" , cities)
+//--Array Length using len()	
+	fmt.Printf("Array length : %v \n" , len(cities) )
+}
+</code>
+</pre>
+
+
+</body>
+</html>

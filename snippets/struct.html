@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../misc/dark.css">
+     <!-- <link rel="stylesheet" href="./misc/prism.css"> -->
+     <!-- <script src="./misc/prism.js"></script> -->
+    <link rel="stylesheet"
+      href="../misc/highlight-theme.css">
+<script src="../misc/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+     <title>Go Struct</title>
+</head>
+<body>
+<h1>Struct</h1>
+
+<p>Struct example with sending it to a function by reference and by value</span>.</p>
+
+<pre class="language-go">
+<code >
+package main
+import ("fmt"
+	// "github.com/bilza2023/learningGo/util"
+		)
+
+	type UserData struct {
+		firstName string
+		lastName string
+		age uint
+		isMember bool
+		amountDue float32
+	}
+
+func main(){
+	
+fristUser := UserData { "Mike" , "Tyson" , 50 , true , 87.33}
+fmt.Println("fristUser.firstName", fristUser.firstName)
+fmt.Println("fristUser.lastName", fristUser.lastName)
+
+//--this will not change the original struct (firstUser)
+secondUser := createNewUser(fristUser)
+ 
+fmt.Printf("secondUser %v \n",secondUser)
+
+//--this will Change the original struct (firstUser)
+createOrignalUser( &fristUser)
+ 
+fmt.Printf("fristUser changed %v \n",fristUser)
+
+}
+
+func createNewUser (userData UserData) UserData {
+	userData.firstName = "John"
+	userData.amountDue += 100
+	return userData
+}
+
+func createOrignalUser (userData * UserData) {
+	userData.firstName = "Orignal Name changed"
+	userData.amountDue = 10000
+}
+</code>
+</pre>
+
+
+</body>
+</html>
